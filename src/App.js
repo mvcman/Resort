@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import  './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Home from './components/Home.js';
+import SingleRoom from './components/SingleRoom.js';
+import Rooms from './components/Rooms.js';
+import ErrorPage from './components/ErrorPage.js';
+import Navbar from './components/Navbar.js';
+import Footer from './components/Footer.js';
 
+//import Login from './components/Login.js';
+//import { store } from './Redux/Store.js';
+//import { Provider } from 'react-redux';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    //<Provider store={store}>
+    <div>
+      <Navbar />
+      <Switch>
+        {/*<Route exact path="/login" component={Login} />*/}
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/rooms" component={Rooms}/>
+        <Route exact path="/singleroom" component={SingleRoom }/>
+        <Route component={ErrorPage}/>
+      </Switch>
+      <Footer />
     </div>
   );
 }
