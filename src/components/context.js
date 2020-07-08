@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import items from '../data.js';
+
 const RoomContext = React.createContext();
 
 class RoomProvider extends Component {
@@ -62,10 +63,25 @@ class RoomProvider extends Component {
   }
 
   handleChange = (event) => {
-      const type = event.target.type;
+      const target = event.target;
+      const value = event.type === 'checkbox' ? target.checked : target.value;
       const name = event.target.name;
-      const value = event.target.value;
-      console.log(type, name, value);
+      console.log(name, value);
+      this.setState({
+        [name]: value,
+      }, this.filterRooms);
+  }
+
+  filterRooms = () => {
+    console.log('Filter rooms');
+    let { rooms, type, capacity, price, minSize, maxSize, breakfast, pets } = this.state;
+    let tempRooms = [...rooms];
+    if (type !== 'all'){
+        tempRooms = tempRooms.filter(item => item.type === type);
+    }
+    this.setState({
+        sortedRooms: tempRooms
+    });
   }
 
   render(){
@@ -73,7 +89,9 @@ class RoomProvider extends Component {
     <RoomContext.Provider 
     value={{
         ...this.state,
-         getRoom: this.getRoom
+         getRoom: this.getRoom,
+         handleChange: this.handleChange,
+         filterRooms: this.filterRooms
     }}>
         {this.props.children}
     </RoomContext.Provider>
