@@ -8,22 +8,22 @@ export default class Services extends Component{
       {
         icon: <FaCocktail/>,
         title:"Free Cocktails",
-        info: "fas fasfklj f kjsjl jfkljk js a!"
+        info: "At a minimum, most inclusive resorts include lodging, unlimited food, drink, sports activities, and entertainment for the fixed price. ... An all-inclusive resort includes three meals daily, soft drinks, most alcoholic drinks, gratuities, and usually other services in the price."
       },
       {
         icon: <FaHiking/>,
         title:"Endless Hiking",
-        info: "fas fasfklj f kjsjl jfkljk js a!"
+        info: "At a minimum, most inclusive resorts include lodging, unlimited food, drink, sports activities, and entertainment for the fixed price. ... An all-inclusive resort includes three meals daily, soft drinks, most alcoholic drinks, gratuities, and usually other services in the price."
       },
       {
         icon: <FaShuttleVan/>,
         title:"Free ShuttleVan",
-        info: "fas fasfklj f kjsjl jfkljk js a!"
+        info: "At a minimum, most inclusive resorts include lodging, unlimited food, drink, sports activities, and entertainment for the fixed price. ... An all-inclusive resort includes three meals daily, soft drinks, most alcoholic drinks, gratuities, and usually other services in the price."
       },
       {
         icon: <FaBeer/>,
         title:"Strongest Beer",
-        info: "fas fasfklj f kjsjl jfkljk js a!"
+        info: "At a minimum, most inclusive resorts include lodging, unlimited food, drink, sports activities, and entertainment for the fixed price. ... An all-inclusive resort includes three meals daily, soft drinks, most alcoholic drinks, gratuities, and usually other services in the price."
       }
     ]
   }

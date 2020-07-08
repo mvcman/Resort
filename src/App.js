@@ -20,7 +20,7 @@ function App() {
         {/*<Route exact path="/login" component={Login} />*/}
         <Route exact path="/" component={Home}/>
         <Route exact path="/rooms" component={Rooms}/>
-        <Route exact path="/singleroom" component={SingleRoom }/>
+        <Route exact path="/rooms/:slug" component={SingleRoom }/>
         <Route component={ErrorPage}/>
       </Switch>
       <Footer />
